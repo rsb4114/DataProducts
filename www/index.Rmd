@@ -1,0 +1,26 @@
+---
+title: "Predicting MPG of Your Car!!!"
+output: html_document
+---
+##Overview
+This program predicts the MPG (Miles/(US) gallon) for your car based on the input parameters below
+
+cyl:	 Number of cylinders
+
+hp:	 Gross horsepower
+
+wt:	 Weight (lb/1000)
+
+am:	 Transmission (0 = automatic, 1 = manual)
+
+gear:	 Number of forward gears
+
+A linear regression model was built using **mtcars** dataset, and prediction was applied based on the input data.
+
+**Keep adjusting the input values and click on "Submit" button to see the mpg predicted value.**
+
+##Motor Trend Car Road Tests
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models).
+
+###Source
+Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391-411.

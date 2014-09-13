@@ -1,0 +1,57 @@
+Predicting MPG of Your Car!!!
+========================================================
+author: Ram
+date: `r date()`
+transition: fade
+
+About the App
+========================================================
+
+The MPG App is the first of its kind app that can predict 
+the MPG (Miles/(US) gallon) for your car based on the 
+following input parameters
+
+- Number of cylinders
+- Gross horsepower
+- Weight (lb/1000)
+- Transmission (Automatic, Manual)
+- Number of forward gears
+
+About the Dataset
+========================================================
+<small style="font-size:0.9em">
+The App was created using the mtcars dataset. The data was 
+extracted from the 1974 Motor Trend US magazine, and 
+comprises fuel consumption and 10 aspects of automobile 
+design and performance for 32 automobiles (1973-74 models).
+</small>
+<small style="font-size:.4em">
+```{r, echo=FALSE}
+data(mtcars)
+mtcars$am <- as.factor(mtcars$am)
+mtcars$cyl <- as.factor(mtcars$cyl)
+mtcars$gear <- as.factor(mtcars$gear) 
+levels(mtcars$am) <- c("Auto", "Manual")
+```
+```{r}
+summary(mtcars$hp)
+summary(mtcars$wt)
+levels(mtcars$am)
+levels(mtcars$cyl)
+levels(mtcars$gear)
+```
+</small>
+
+About the Model
+========================================================
+
+The website for the App is https://rsb4114.shinyapps.io/Project1/
+
+The regression model was created using caret package
+
+model <- train(mpg~hp+cyl+gear+am+wt, data = mtcars, method = "lm")
+
+
+Thank You
+========================================================
+I hope you had fun playing with my app!! Please do recommend it to your friend :) 
